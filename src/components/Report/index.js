@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import {QuizContext} from '../../Context'
+import ReportUnattempt from '../ReportUnattempt'
 import NavBar from '../Navbar'
 import './index.css'
 
@@ -10,7 +11,7 @@ const Report = () => {
     unattempted,
     unattemptedList,
   } = useContext(QuizContext)
-  console.log(unattemptedList)
+
   return (
     <div className="quiz-page">
       <NavBar />
@@ -34,19 +35,41 @@ const Report = () => {
                     src="https://assets.ccbp.in/frontend/react-js/quiz-game-wrong-check-img.png"
                     alt="incorrect answer icon"
                   />{' '}
-                  <p>{wrongAnswers} Wrong answers</p>
+                  <p>{wrongAnswers} Incorrect answers</p>
                 </li>
                 <li>
                   <img
                     src="https://assets.ccbp.in/frontend/react-js/quiz-game-un-answered-img.png"
                     alt="unattempted icon"
                   />{' '}
-                  <p>{unattempted} Unattempted</p>
+                  <p>{unattempted} Unattempted answers</p>
                 </li>
               </ul>
             </div>
             <div className="report-bottom-content">
-              <p className="atempted-all">Attempted all the questions</p>
+              {unattempted > 0 ? (
+                <div className="un-attempt-content">
+                  <h1 className="atempted-all">Unattempted Questions</h1>
+                  <ul className="un-attempt-ul-list">
+                    {unattemptedList.map(el => {
+                      const optionType = el.options_type
+                      const questionText = el.question_text
+                      const {id, options} = el
+                      return (
+                        <li key={id}>
+                          <p>{questionText}</p>
+                          <ReportUnattempt
+                            optionType={optionType}
+                            options={options}
+                          />
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              ) : (
+                <h1 className="atempted-all">Attempted all the questions</h1>
+              )}
             </div>
           </div>
         </div>

@@ -89,13 +89,13 @@ export default function TrueFalseType(prop) {
     <div className="default-type">
       <div className="top-section">
         <div className="question-outoff">
-          <h1>Question</h1>
-          <h1>{questionNumber}/10</h1>
+          <p>Question</p>
+          <p>{questionNumber}/10</p>
         </div>
         <p className="time-remain">{time}</p>
       </div>
       <div className="question-section">
-        <h1 className="questioning">{questionText}</h1>
+        <p className="questioning">{questionText}</p>
         <ul className="default-list">
           <li>
             <button type="button" ref={optionOneBtn} onClick={onTrueFalse}>

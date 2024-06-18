@@ -1,0 +1,32 @@
+.ul-listOne {
+  padding: 0;
+  list-style: none;
+}
+.ul-listOne li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.correct-opt {
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  background: #1c944b;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrong-opt {
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  background: #cbd5e1;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.correct-img {
+  width: 200px;
+}

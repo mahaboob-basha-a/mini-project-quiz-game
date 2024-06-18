@@ -49,8 +49,31 @@
   align-items: center;
   justify-content: center;
 }
-.report-bottom-content .atempted-all {
+.atempted-all {
   font-size: 18px;
   color: #0ea5e9;
   font-weight: 500;
+}
+.un-attempt-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+.un-attempt-ul-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.un-attempt-ul-list::-webkit-scrollbar{
+  display: none;
 }

@@ -21,12 +21,12 @@
   background-color: #d2a7b3;
   border-radius: 5px;
 }
-.default-type .top-section .question-outoff h1 {
-  font-size: 13px;
+.default-type .top-section .question-outoff p {
+  font-size: 11px;
   color: #334155;
 }
-.default-type .top-section .question-outoff h1:nth-child(2) {
-  font-size: 18px;
+.default-type .top-section .question-outoff p:nth-child(2) {
+  font-size: 15px;
   color: #fff;
   font-weight: 500;
 }

@@ -130,7 +130,7 @@ const DefaultType = prop => {
         </ul>
       </div>
       {questionNumber === 10 ? (
-        <Link className="anchor-one" to="/congrats">
+        <Link className="anchor-one" to="/result">
           <button
             type="button"
             className={lock ? 'active-next-btn' : 'next-question'}

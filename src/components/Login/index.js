@@ -50,7 +50,7 @@ export default class Login extends Component {
             src="https://res.cloudinary.com/dmoa3xmnx/image/upload/v1716293738/Frame_8004_ndpwcq.png"
             alt="login website logo"
           />
-          <form onSubmit={this.onSubmit}>
+          <form>
             <label htmlFor="username">USERNAME</label>
             <input
               value={username}
@@ -82,7 +82,9 @@ export default class Login extends Component {
                 Show Password
               </label>
             </div>
-            <button type="button">Login</button>
+            <button type="button" onClick={this.onSubmit}>
+              Login
+            </button>
           </form>
           <p className="error-login">{errorMsg}</p>
         </div>

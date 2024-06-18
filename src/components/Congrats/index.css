@@ -1,0 +1,25 @@
+.conrats-page {
+  /* background: #fff; */
+  height: 100%;
+  width: 100%;
+  background: url('https://assets.ccbp.in/frontend/react-js/quiz-game-congrats-card-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conrats-page .congrats-content img {
+  width: 100px;
+}
+.congrats-content h1 {
+  font-size: 18px;
+}
+.congrats-content .answered {
+  font-size: 20px;
+  color: #0ea5e9;
+}
+.congrats-content img {
+  width: 200px;
+}

@@ -1,0 +1,48 @@
+.nav-bar {
+  width: 96%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #fafbfe;
+}
+.nav-logo {
+  width: 60px;
+  height: 44px;
+}
+.logout-btn-large {
+  display: inline;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid #afafaf;
+  padding: 12px 24px;
+  font-family: 'roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #afafaf;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.logout-btn-small {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logout-btn-large {
+    display: none;
+  }
+  .logout-btn-small {
+    display: inline;
+    border: 0;
+    cursor: pointer;
+    background: none;
+  }
+  .nav-bar {
+    width: 94%;
+  }
+}

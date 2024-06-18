@@ -1,0 +1,131 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
+  background: linear-gradient(to right, #dbbcc4, #f3dfd8, #d8bfd0, #bfb1d5);
+}
+.login-card {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.login-page img {
+  width: 96px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  width: 411px;
+  /* height: 254px; */
+  /* background-color: #000; */
+  gap: 5px;
+}
+.login-page form div {
+  align-self: flex-end;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.login-page form input[type='text'],
+input[type='password'] {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #d7dfe9;
+  width: 411px;
+  height: 25px;
+}
+.login-page form label {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e858e;
+}
+.login-page form input::placeholder {
+  color: #263868;
+}
+.login-page .checkbox-label {
+  color: #000;
+  font-size: 14px;
+}
+.login-page form input[type='checkbox'] {
+  border: 1px solid #d7dfe9;
+  width: 16px;
+  height: 16px;
+}
+.login-page form button {
+  background-color: #0ea5e9;
+  color: #f8fafc;
+  border-radius: 8px;
+  padding: 8px, 16px;
+  border: 0;
+  height: 40px;
+  width: 411px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+}
+.error-login {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto';
+}
+@media screen and (max-width: 600px) {
+  .login-page form input[type='text'],
+  input[type='password'] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #d7dfe9;
+    width: 280px;
+    height: 25px;
+  }
+  .login-page form label {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7e858e;
+  }
+  .login-page form button {
+    background-color: #0ea5e9;
+    color: #f8fafc;
+    border-radius: 8px;
+    padding: 6px, 14px;
+    border: 0;
+    height: 40px;
+    width: 280px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+  }
+  .login-page .checkbox-label {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .login-page form input[type='checkbox'] {
+    border: 1px solid #d7dfe9;
+    width: 13px;
+    height: 13px;
+  }
+  .login-page form {
+    width: 280px;
+  }
+  .login-card {
+    width: 90%;
+    height: 90%;
+  }
+}

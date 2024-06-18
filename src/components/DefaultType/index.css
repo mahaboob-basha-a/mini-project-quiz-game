@@ -1,0 +1,124 @@
+.default-type {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.default-type .top-section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.default-type .top-section .question-outoff {
+  /* font-size: 16px; */
+  height: 60px;
+  width: 80px;
+  background-color: #d2a7b3;
+  border-radius: 5px;
+}
+.default-type .top-section .question-outoff h1 {
+  font-size: 13px;
+  color: #334155;
+}
+.default-type .top-section .question-outoff h1:nth-child(2) {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+.default-type .top-section .time-remain {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #0ea5e9;
+  border-radius: 50%;
+  color: #1e393b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  padding: 2px;
+  font-weight: 600;
+}
+.question-section .questioning {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #334155;
+}
+.question-section .default-list li {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+  gap: 5px;
+}
+.question-section .default-list li button {
+  width: 280px;
+  height: 100%;
+  border: 0;
+  background-color: #cbd5e1;
+  color: #334155;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.question-section .default-list {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 0;
+  margin-top: 40px;
+}
+.default-type .next-question {
+  width: 85px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #7d7d7d;
+  border: 0;
+  background-color: #cbd5e1;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: auto;
+}
+.active-next-btn {
+  width: 85px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #fff;
+  border: 0;
+  background-color: #0ea5e9;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: auto;
+}
+.default-list a button {
+  align-self: flex-end;
+}
+.right-icon {
+  width: 20px;
+}
+@media screen and (min-width: 768px) {
+  .default-type .next-question {
+    align-self: flex-end;
+  }
+  .default-type .active-next-btn {
+    align-self: flex-end;
+  }
+  .default-type a button {
+    align-self: flex-end;
+  }
+}

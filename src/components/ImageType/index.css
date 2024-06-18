@@ -1,0 +1,23 @@
+.image-select-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.image-select-list li .image-type {
+  width: 130px;
+}
+.image-select-list li {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.image-select-list li button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}

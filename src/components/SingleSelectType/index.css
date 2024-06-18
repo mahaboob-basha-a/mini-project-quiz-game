@@ -1,0 +1,10 @@
+.single-select-list {
+  list-style: none;
+  padding: 0;
+}
+.single-select-list li {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

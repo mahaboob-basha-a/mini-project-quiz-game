@@ -26,12 +26,13 @@ const DefaultType = prop => {
     setUnattempted,
     setUnattemptedList,
   } = useContext(QuizContext)
-  // eslint-disable-next-line
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     timerId.current = setInterval(() => {
       setTime(prev => prev - 1)
     }, 1000)
     return () => clearInterval(timerId.current)
+    //  eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const timeOut = () => {
@@ -103,34 +104,30 @@ const DefaultType = prop => {
       <div className="question-section">
         <p className="questioning">{questionText}</p>
         <ul className="default-list">
-          <li key={options[0].id}>
-            <button type="button" ref={button1} onClick={optionSelect}>
-              {options[0].text}
-            </button>
-            <img ref={img1} className="right-icon" src="" alt="" />
-          </li>
-          <li key={options[1].id}>
-            <button type="button" ref={button2} onClick={optionSelect}>
-              {options[1].text}
-            </button>
-            <img ref={img2} className="right-icon" src="" alt="" />
-          </li>
-          <li key={options[2].id}>
-            <button type="button" ref={button3} onClick={optionSelect}>
-              {options[2].text}
-            </button>
-            <img ref={img3} className="right-icon" src="" alt="" />
-          </li>
-          <li key={options[3].id}>
-            <button type="button" ref={button4} onClick={optionSelect}>
-              {options[3].text}
-            </button>
-            <img ref={img4} className="right-icon" src="" alt="" />
-          </li>
+          {options.map((item, indx) => {
+            const {id, text} = item
+            return (
+              <li key={id}>
+                <button
+                  type="button"
+                  ref={optionList[indx]}
+                  onClick={optionSelect}
+                >
+                  {text}
+                </button>
+                <img
+                  ref={optionImg[indx]}
+                  className="right-icon"
+                  src=""
+                  alt=""
+                />
+              </li>
+            )
+          })}
         </ul>
       </div>
       {questionNumber === 10 ? (
-        <Link className="anchor-one" to="/result">
+        <Link className="anchor-one" to="/game-results">
           <button
             type="button"
             className={lock ? 'active-next-btn' : 'next-question'}

@@ -82,7 +82,7 @@ export default class Login extends Component {
                 Show Password
               </label>
             </div>
-            <button type="button" onClick={this.onSubmit}>
+            <button type="submit" onClick={this.onSubmit}>
               Login
             </button>
           </form>

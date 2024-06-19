@@ -88,46 +88,23 @@ export default function ImageType(prop) {
       <div className="question-section">
         <p className="questioning">{questionText}</p>
         <ul className="image-select-list">
-          <li>
-            <button type="button" onClick={onSelectOption}>
-              <img
-                className="image-type"
-                src={options[0].image_url}
-                alt={options[0].text}
-              />
-            </button>
-            <img ref={imgOpt1} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <button type="button" onClick={onSelectOption}>
-              <img
-                className="image-type"
-                src={options[1].image_url}
-                alt={options[1].text}
-              />
-            </button>
-            <img ref={imgOpt2} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <button type="button" onClick={onSelectOption}>
-              <img
-                className="image-type"
-                src={options[2].image_url}
-                alt={options[2].text}
-              />
-            </button>
-            <img ref={imgOpt3} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <button type="button" onClick={onSelectOption}>
-              <img
-                className="image-type"
-                src={options[3].image_url}
-                alt={options[3].text}
-              />
-            </button>
-            <img ref={imgOpt4} className="right-icon" src="" alt="" />
-          </li>
+          {options.map((item, indx) => {
+            const imageUrl = item.image_url
+            const {id, text} = item
+            return (
+              <li key={id}>
+                <button type="button" onClick={onSelectOption}>
+                  <img className="image-type" src={imageUrl} alt={text} />
+                </button>
+                <img
+                  ref={imageOptions[indx]}
+                  className="right-icon"
+                  src=""
+                  alt=""
+                />
+              </li>
+            )
+          })}
         </ul>
       </div>
       <button

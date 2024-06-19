@@ -60,7 +60,7 @@ export default class QuizGame extends Component {
               alt="failure view"
             />
             <h1>Something went wrong</h1>
-            <p>Our server are busy please try again</p>
+            <p>Our servers are busy please try again</p>
             <button type="button" onClick={() => this.fetchingData()}>
               Retry
             </button>

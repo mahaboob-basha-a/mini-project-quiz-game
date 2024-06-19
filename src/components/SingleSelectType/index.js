@@ -97,66 +97,28 @@ export default function SingleSelectType(prop) {
       <div className="question-section">
         <p className="questioning">{questionText}</p>
         <ul className="single-select-list">
-          <li>
-            <input
-              disabled={lockThree}
-              onClick={onSingleSelect}
-              value={options[0].text}
-              id="text0"
-              type="radio"
-              name="mbs"
-            />
-            <label htmlFor="text0">{options[0].text}</label>
-            <img ref={singleImg1} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <input
-              disabled={lockThree}
-              onClick={onSingleSelect}
-              value={options[1].text}
-              id="text1"
-              type="radio"
-              name="mbs"
-            />
-            <label htmlFor="text1">{options[1].text}</label>
-            <img ref={singleImg2} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <input
-              disabled={lockThree}
-              onClick={onSingleSelect}
-              value={options[2].text}
-              id="text2"
-              type="radio"
-              name="mbs"
-            />
-            <label htmlFor="text2">{options[2].text}</label>
-            <img ref={singleImg3} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <input
-              disabled={lockThree}
-              onClick={onSingleSelect}
-              value={options[3].text}
-              id="text3"
-              type="radio"
-              name="mbs"
-            />
-            <label htmlFor="text3">{options[3].text}</label>
-            <img ref={singleImg4} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <input
-              disabled={lockThree}
-              onClick={onSingleSelect}
-              value={options[4].text}
-              id="text4"
-              type="radio"
-              name="mbs"
-            />
-            <label htmlFor="text4">{options[4].text}</label>
-            <img ref={singleImg5} className="right-icon" src="" alt="" />
-          </li>
+          {options.map((item, indx) => {
+            const {id, text} = item
+            return (
+              <li key={id}>
+                <input
+                  disabled={lockThree}
+                  onClick={onSingleSelect}
+                  value={text}
+                  id={id}
+                  type="radio"
+                  name="mbs"
+                />
+                <label htmlFor={id}>{text}</label>
+                <img
+                  ref={singleImgOptions[indx]}
+                  className="right-icon"
+                  src=""
+                  alt=""
+                />
+              </li>
+            )
+          })}
         </ul>
       </div>
       <button

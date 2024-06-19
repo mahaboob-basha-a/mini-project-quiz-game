@@ -97,18 +97,22 @@ export default function TrueFalseType(prop) {
       <div className="question-section">
         <p className="questioning">{questionText}</p>
         <ul className="default-list">
-          <li>
-            <button type="button" ref={optionOneBtn} onClick={onTrueFalse}>
-              {options[0].text}
-            </button>
-            <img ref={optionOne} className="right-icon" src="" alt="" />
-          </li>
-          <li>
-            <button type="button" ref={optionTwoBtn} onClick={onTrueFalse}>
-              {options[1].text}
-            </button>
-            <img ref={optionTwo} className="right-icon" src="" alt="" />
-          </li>
+          {options.map((item, indx) => {
+            const {id, text} = item
+            return (
+              <li key={id}>
+                <button type="button" ref={imgList[indx]} onClick={onTrueFalse}>
+                  {text}
+                </button>
+                <img
+                  ref={optionsList[indx]}
+                  className="right-icon"
+                  src=""
+                  alt=""
+                />
+              </li>
+            )
+          })}
         </ul>
       </div>
       <button

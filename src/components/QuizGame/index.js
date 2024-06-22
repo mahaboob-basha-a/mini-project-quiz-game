@@ -3,6 +3,7 @@ import Loading from '../Loading'
 import NavBar from '../Navbar'
 import DefaultType from '../DefaultType'
 import SingleSelectType from '../SingleSelectType'
+// eslint-disable-next-line react-hooks/exhaustive-deps
 import TrueFalseType from '../TrueFalseType'
 import ImageType from '../ImageType'
 import './index.css'
@@ -94,12 +95,14 @@ export default class QuizGame extends Component {
               <div className="quiz-bottom-card">
                 {questionDetails.options.length > 2 ? (
                   <DefaultType
+                    lengthOne={questionsList.length}
                     questionNumber={questionNumber + 1}
                     questionData={questionDetails}
                     increaseQuistionNumberOne={this.increaseQuistionNumber}
                   />
                 ) : (
                   <TrueFalseType
+                    lengthTwo={questionsList.length}
                     questionNumber={questionNumber + 1}
                     questionData={questionDetails}
                     increaseQuistionNumberFour={this.increaseQuistionNumber}
@@ -116,6 +119,7 @@ export default class QuizGame extends Component {
             <div className="quiz-page-bottom">
               <div className="quiz-bottom-card">
                 <ImageType
+                  lengthFour={questionsList.length}
                   questionNumber={questionNumber + 1}
                   questionData={questionDetails}
                   increaseQuistionNumberTwo={this.increaseQuistionNumber}
@@ -131,6 +135,7 @@ export default class QuizGame extends Component {
             <div className="quiz-page-bottom">
               <div className="quiz-bottom-card">
                 <SingleSelectType
+                  lengthFive={questionsList.length}
                   questionNumber={questionNumber + 1}
                   questionData={questionDetails}
                   increaseQuistionNumberThree={this.increaseQuistionNumber}

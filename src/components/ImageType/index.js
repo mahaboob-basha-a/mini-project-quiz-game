@@ -1,9 +1,14 @@
 import {useState, useRef, useEffect, useContext} from 'react'
-import {QuizContext} from '../../Context'
+import QuizContext from '../../Context'
 import './index.css'
 
 export default function ImageType(prop) {
-  const {increaseQuistionNumberTwo, questionData, questionNumber} = prop
+  const {
+    increaseQuistionNumberTwo,
+    questionData,
+    questionNumber,
+    lengthFour,
+  } = prop
   const {options} = questionData
   const questionText = questionData.question_text
   const imgOpt1 = useRef()
@@ -81,7 +86,7 @@ export default function ImageType(prop) {
       <div className="top-section">
         <div className="question-outoff">
           <p>Question</p>
-          <p>{questionNumber}/10</p>
+          <p>{`${questionNumber}/${lengthFour}`}</p>
         </div>
         <p className="time-remain">{time}</p>
       </div>

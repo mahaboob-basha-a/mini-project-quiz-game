@@ -1,9 +1,14 @@
 import {useState, useRef, useEffect, useContext} from 'react'
-import {QuizContext} from '../../Context'
+import QuizContext from '../../Context'
 import './index.css'
 
 export default function SingleSelectType(prop) {
-  const {increaseQuistionNumberThree, questionData, questionNumber} = prop
+  const {
+    increaseQuistionNumberThree,
+    questionData,
+    questionNumber,
+    lengthFive,
+  } = prop
   const {options} = questionData
   const questionText = questionData.question_text
   const singleImg1 = useRef()
@@ -90,7 +95,7 @@ export default function SingleSelectType(prop) {
       <div className="top-section">
         <div className="question-outoff">
           <p>Question</p>
-          <p>{questionNumber}/10</p>
+          <p>{`${questionNumber}/${lengthFive}`}</p>
         </div>
         <p className="time-remain">{time}</p>
       </div>

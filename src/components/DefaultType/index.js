@@ -1,10 +1,15 @@
 import {useState, useRef, useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'
-import {QuizContext} from '../../Context'
+import QuizContext from '../../Context'
 import './index.css'
 
 const DefaultType = prop => {
-  const {increaseQuistionNumberOne, questionData, questionNumber} = prop
+  const {
+    increaseQuistionNumberOne,
+    questionData,
+    questionNumber,
+    lengthOne,
+  } = prop
   const {options} = questionData
   const questionText = questionData.question_text
   const button1 = useRef()
@@ -97,7 +102,7 @@ const DefaultType = prop => {
       <div className="top-section">
         <div className="question-outoff">
           <p>Question</p>
-          <p>{questionNumber}/10</p>
+          <p>{`${questionNumber}/${lengthOne}`}</p>
         </div>
         <p className="time-remain">{time}</p>
       </div>

@@ -1,5 +1,5 @@
 import {useContext} from 'react'
-import {QuizContext} from '../../Context'
+import QuizContext from '../../Context'
 import ReportUnattempt from '../ReportUnattempt'
 import NavBar from '../Navbar'
 import './index.css'

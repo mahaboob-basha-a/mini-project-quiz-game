@@ -1,9 +1,14 @@
 import {useState, useEffect, useRef, useContext} from 'react'
-import {QuizContext} from '../../Context'
+import QuizContext from '../../Context'
 import './index.css'
 
 export default function TrueFalseType(prop) {
-  const {increaseQuistionNumberFour, questionData, questionNumber} = prop
+  const {
+    increaseQuistionNumberFour,
+    questionData,
+    questionNumber,
+    lengthTwo,
+  } = prop
   const {options} = questionData
   const questionText = questionData.question_text
   const optionOne = useRef()
@@ -90,7 +95,7 @@ export default function TrueFalseType(prop) {
       <div className="top-section">
         <div className="question-outoff">
           <p>Question</p>
-          <p>{questionNumber}/10</p>
+          <p>{`${questionNumber}/${lengthTwo}`}</p>
         </div>
         <p className="time-remain">{time}</p>
       </div>

@@ -6,9 +6,11 @@
   justify-content: center;
   /* gap: 20px; */
   background: linear-gradient(to right, #dbbcc4, #f3dfd8, #d8bfd0, #bfb1d5);
+  padding: 0;
+  margin: 0;
 }
 .login-card {
-  width: 80%;
+  width: 60%;
   height: 80%;
   display: flex;
   align-items: center;
@@ -42,7 +44,7 @@ input[type='password'] {
   border-radius: 5px;
   border: 1px solid #d7dfe9;
   width: 411px;
-  height: 25px;
+  height: 40px;
 }
 .login-page form label {
   font-family: 'Roboto';
@@ -82,14 +84,14 @@ input[type='password'] {
   font-weight: 400;
   font-family: 'Roboto';
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 598px) {
   .login-page form input[type='text'],
   input[type='password'] {
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #d7dfe9;
     width: 280px;
-    height: 25px;
+    height: 40px;
   }
   .login-page form label {
     font-family: 'Roboto';
@@ -125,7 +127,13 @@ input[type='password'] {
     width: 280px;
   }
   .login-card {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 50%;
+  }
+}
+@media screen and (min-width:598px){
+  .login-card {
+    width: 85%;
+    height: 70%;
   }
 }

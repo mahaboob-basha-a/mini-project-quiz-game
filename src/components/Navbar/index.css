@@ -45,4 +45,8 @@
   .nav-bar {
     width: 94%;
   }
+  .nav-logo {
+    width: 50px;
+    height: 40px;
+  }
 }

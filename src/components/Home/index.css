@@ -1,5 +1,5 @@
 .home-page {
-  height: 100vh;
+  height: 97vh;
   width: 100vw;
 }
 .home-bottom {
@@ -66,13 +66,47 @@
   width: 400px;
   height: 280px;
 }
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 600px) {
   .home-img {
     width: 280px;
     height: 160px;
   }
   .home-bottom-card {
-    width: 380px;
-    height: 600px;
+    width: 360px;
+    height: 500px;
+  }
+  .home-alert {
+    width: 300px;
+    height: 35px;
+    margin-top: 30px;
+  }
+  .home-alert img {
+    width: 14px;
+  }
+  .home-alert .alert-para {
+    color: #d97706;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width:1200px) {
+  .home-img {
+    width: 280px;
+    height: 160px;
+  }
+  .home-bottom-card {
+    width: 560px;
+    height: 500px;
+  }
+  .home-alert {
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+  }
+  .home-alert img {
+    width: 20px;
+  }
+  .home-alert .alert-para {
+    color: #d97706;
+    font-size: 13px;
   }
 }

@@ -8,3 +8,10 @@
   align-items: center;
   gap: 10px;
 }
+
+@media screen and (max-width:800px){
+  .single-select-list li {
+    width: 350px;
+    gap: 4px;
+  }
+}
